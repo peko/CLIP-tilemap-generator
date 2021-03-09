@@ -242,8 +242,8 @@ let Preview = L.Control.extend({
     json = await res.json();
     txt = json.sort((a,b)=>b[0]-a[0]).map((a)=>
         `${a[0].toFixed(2)}: ${a[1].replace(/<.*?>/g,'')}`
-    ).filter((a)=>a.length>5).join('\n');
-    this._info.innerText = `Neuron: ${i}\n${txt}`;
+    ).filter((a)=>a.length>5).join('<br>');
+    this._info.innerHTML = `<b><a href="https://microscope-azure-edge.openai.com/models/contrastive_4x/image_block_4_5_Add_6_0/${i}">Unit ${i}</a></b><br>${txt}`;
   }
 });
 
