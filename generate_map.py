@@ -17,7 +17,7 @@ try: os.mkdir(map_dir)
 except: pass
 
 # Гильберт
-# Поиск ближайшего кводрата со стороной 2^n
+# Поиск ближайшего квaдрата со стороной 2^n
 l = len(files)
 n = 2**ceil(log2(sqrt(l)))
 def d2xy(d): 
